@@ -1,7 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color: #515076;
 }
 
 .title {
@@ -18,13 +23,30 @@ body {
   margin: 0;
 }
 
-.main-text {
-  color: #515076;
-}
-
 .price-row {
   display: flex;
-  gap: 110px;
+  gap: 190px;
   align-items: center;
   list-style: none;
+  line-height: 24px;
+}
+
+.components-list {
+  margin-top: 0px;
+  padding: 5px;
+}
+
+.component {
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.card {
+  background: #F7F7FA;
+  width: 340px;
+  padding: 25px;
+  margin: 25px;
+  img {
+    width: 290px;
+  } 
 }
