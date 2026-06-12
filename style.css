@@ -8,7 +8,6 @@ body {
   line-height: 18px;
   margin: auto;
   width: 1280px;
-  height: 1715px;
   color: #515076;
 }
 
@@ -33,15 +32,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 1110px;
-  height: 1191px;
+  max-width: 1110px;
 }
 
 .price-row {
   display: flex;
-  gap: 150px;
-  align-items: center;
-  list-style: none;
+  justify-content: space-between;
   line-height: 24px;
   font-size: 20px;
 }
