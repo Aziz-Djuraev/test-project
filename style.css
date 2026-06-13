@@ -6,9 +6,12 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin: auto;
-  width: 1280px;
   color: #515076;
+}
+
+.content {
+  max-width: 1280px;
+  margin: auto;
 }
 
 .title {
@@ -31,6 +34,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  gap: 45px;
   justify-content: center;
   max-width: 1110px;
 }
@@ -57,7 +61,6 @@ body {
   width: 340px;
   height: 573px;
   padding: 25px;
-  margin: 15px;
   img {
     width: 290px;
   }
