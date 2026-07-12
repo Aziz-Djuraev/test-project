@@ -3,7 +3,8 @@ const changeColorFirstCardButton = document.querySelector('#change-color-first-c
 const productCards = document.querySelectorAll('.card');
 const changeColorAllCardButton = document.querySelector('#change-color-all-card');
 const openPadgeGoogleButton = document.querySelector('#open-padge-google');
-const outputLogButton = document.querySelector('#output-message-consol-log');
+const outputLogButton = document.querySelector('#output-message-console-log');
+const title = document.querySelector('.title');
 const changeColorButton = document.querySelector('#change-color-button');
 
 const greenColorHash = '#00FF00';
@@ -27,12 +28,16 @@ function openGoogle() {
   }
 }
 
-outputLogButton.addEventListener('click', () => outputMessageConsolLog('ДЗ №6'));
+outputLogButton.addEventListener('click', () => outputMessageConsoleLog('ДЗ №6'));
 
-function outputMessageConsolLog(message) {
+function outputMessageConsoleLog(message) {
   alert(message);
   console.log(message);
 }
+
+title.addEventListener('mouseover', () => {
+    console.log(title.textContent);
+});
 
 changeColorButton.addEventListener('click', () => {
   changeColorButton.classList.toggle('active');
