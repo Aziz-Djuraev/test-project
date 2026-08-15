@@ -1,3 +1,8 @@
+// 6. Импортируем массив комментариев
+
+import { comments } from "./comment.js";
+
+
 // 2. Массив чисел от 1 до 10
 // Получаем числа начиная с 5
 
@@ -45,9 +50,6 @@ const reversedSecondArray = reverseArray(secondArray);
 console.log(reversedFirstArray);
 console.log(reversedSecondArray);
 
-// 6. Импортируем массив комментариев
-
-import { comments } from "./comment.js";
 
 // 7. Получаем комментарии,
 // у которых почта содержит ".com"
@@ -63,18 +65,11 @@ console.log(commentsWithCom);
 // Если id > 5, устанавливаем postId = 1.
 
 const changedComments = comments.map(comment => {
-    if (comment.id <= 5) {
         return {
             ...comment,
-            postId: 2
+            postId: comment.id <= 5 ? 2 : 1
         };
-    }
-
-    return {
-        ...comment,
-        postId: 1
-    };
-});
+    });
 
 console.log(changedComments);
 
