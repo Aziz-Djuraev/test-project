@@ -1,6 +1,6 @@
 // 6. Импортируем массив комментариев
 
-import { comments } from "./comment.js";
+import { comments } from "./comments.js";
 
 
 // 2. Массив чисел от 1 до 10
@@ -65,7 +65,7 @@ console.log(commentsWithCom);
 // Если id > 5, устанавливаем postId = 1.
 
 const changedComments = comments.map(comment => {
-        return {
+    return {
             ...comment,
             postId: comment.id <= 5 ? 2 : 1
         };
