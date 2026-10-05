@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -44,17 +44,18 @@
     <script type="module" src="homework-9.js"></script>
     <script type="module" src="homework-10.js"></script>
   </body>
-</html>
+</html> -->
 
 
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -168,9 +169,341 @@
         </li>
       </ul>
     </div>
-    <script src="main.js"></script>
-    <script src="homework-7.js"></script>
-    <script src="homework-8.js"></script>
-    <script type="module" src="homework-9.js"></script>
+    <script src="js/main.js"></script>
+<script src="js/homework-7.js"></script>
+<script src="js/homework-8.js"></script>
+<script type="module" src="js/homework-9.js"></script>
+<script type="module" src="homework-10.js"></script>
   </body>
-</html> -->
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ДЗ-11</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- ОСНОВНАЯ СТРАНИЦА -->
+
+    <main>
+
+        <button
+            type="button"
+            class="registration-button"
+            id="registration-button"
+        >
+            Регистрация
+        </button>
+
+    </main>
+
+
+
+    <!-- OVERLAY -->
+
+    <div class="overlay"></div>
+
+
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+
+    <div class="modal">
+
+        <div class="modal-content">
+
+
+            <!-- КНОПКА ЗАКРЫТИЯ -->
+
+            <button
+                type="button"
+                class="modal-close"
+                id="modal-close"
+            >
+                ×
+            </button>
+
+
+            <h2>Регистрация</h2>
+
+
+            <!-- ФОРМА РЕГИСТРАЦИИ -->
+
+            <form id="registration-form">
+
+
+                <!-- ИМЯ -->
+
+                <div class="form-field">
+
+                    <label for="first-name">
+                        Имя
+                    </label>
+
+                    <input
+                        type="text"
+                        id="first-name"
+                        name="firstName"
+                        placeholder="Введите имя"
+                        required
+                        minlength="2"
+                    >
+
+                </div>
+
+
+                <!-- ФАМИЛИЯ -->
+
+                <div class="form-field">
+
+                    <label for="last-name">
+                        Фамилия
+                    </label>
+
+                    <input
+                        type="text"
+                        id="last-name"
+                        name="lastName"
+                        placeholder="Введите фамилию"
+                        required
+                        minlength="2"
+                    >
+
+                </div>
+
+
+                <!-- ДАТА РОЖДЕНИЯ -->
+
+                <div class="form-field">
+
+                    <label for="birth-date">
+                        Дата рождения
+                    </label>
+
+                    <input
+                        type="date"
+                        id="birth-date"
+                        name="birthDate"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ЛОГИН -->
+
+                <div class="form-field">
+
+                    <label for="login">
+                        Логин
+                    </label>
+
+                    <input
+                        type="text"
+                        id="login"
+                        name="login"
+                        placeholder="Введите логин"
+                        required
+                        minlength="4"
+                    >
+
+                </div>
+
+
+                <!-- ПАРОЛЬ -->
+
+                <div class="form-field">
+
+                    <label for="password">
+                        Пароль
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Введите пароль"
+                        required
+                        minlength="6"
+                    >
+
+                </div>
+
+
+                <!-- ПОВТОР ПАРОЛЯ -->
+
+                <div class="form-field">
+
+                    <label for="repeat-password">
+                        Повторите пароль
+                    </label>
+
+                    <input
+                        type="password"
+                        id="repeat-password"
+                        name="repeatPassword"
+                        placeholder="Повторите пароль"
+                        required
+                        minlength="6"
+                    >
+
+                </div>
+
+
+                <!-- КНОПКА РЕГИСТРАЦИИ -->
+
+                <button
+                    type="submit"
+                    class="registration-submit"
+                >
+                    Зарегистрироваться
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <!-- ЛЕВАЯ ЧАСТЬ -->
+
+            <div class="footer-info">
+
+                <h2>Product Cards</h2>
+
+                <p>
+                    У Нас Самые Лучшие Продукты Для Кожи!
+                </p>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://telegram./"
+                        target="_blank"
+                    >
+                        <img src="images/telegram.svg"/>
+                    </a>
+
+                    <a
+                        href="https://vk.com/"
+                        target="_blank"
+                    >
+                        <img src="images/Vkontacte.svg"/>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ЦЕНТРАЛЬНАЯ ЧАСТЬ -->
+
+            <div class="footer-subscribe">
+
+                <p>
+                    Подпишись на наши акции:
+                </p>
+
+                <form id="subscribe-form">
+
+                    <input
+                        type="email"
+                        id="subscribe-email"
+                        name="email"
+                        placeholder="Введи Email..."
+                        required
+                    >
+
+                    <button type="submit">
+                        Подписаться
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- ПРАВАЯ ЧАСТЬ -->
+
+            <nav class="footer-nav">
+
+                <h2>Быстрые ссылки</h2>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Магазин
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Контакты
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+
+
+        <!-- НИЖНЯЯ ЧАСТЬ -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-line"></div>
+
+            <p>
+                www.product-cards.com©all right reserve
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        type="module"
+        src="js/homework-11.js"
+    ></script>
+
+
+</body>
+
+</html>
