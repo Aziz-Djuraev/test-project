@@ -15,7 +15,7 @@ body {
 }
 
 .title {
-  background-image: url("images/bg_1.png");
+  background-image: url("../images/bg_1.png");
   background-repeat: no-repeat;
   background-size: 790px 697px;
   background-position: 85px 0px;
