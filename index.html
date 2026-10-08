@@ -182,23 +182,16 @@
 
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>ДЗ-11</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-
     <!-- ОСНОВНАЯ СТРАНИЦА -->
-
     <main>
-
         <button
             type="button"
             class="registration-button"
@@ -206,26 +199,16 @@
         >
             Регистрация
         </button>
-
     </main>
 
-
-
     <!-- OVERLAY -->
-
     <div class="overlay"></div>
 
-
-
     <!-- МОДАЛЬНОЕ ОКНО -->
-
     <div class="modal">
-
         <div class="modal-content">
 
-
-            <!-- КНОПКА ЗАКРЫТИЯ -->
-
+    <!-- КНОПКА ЗАКРЫТИЯ -->
             <button
                 type="button"
                 class="modal-close"
@@ -233,24 +216,16 @@
             >
                 ×
             </button>
-
-
             <h2>Регистрация</h2>
 
-
-            <!-- ФОРМА РЕГИСТРАЦИИ -->
-
+    <!-- ФОРМА РЕГИСТРАЦИИ -->
             <form id="registration-form">
 
-
-                <!-- ИМЯ -->
-
+    <!-- ИМЯ -->
                 <div class="form-field">
-
                     <label for="first-name">
                         Имя
                     </label>
-
                     <input
                         type="text"
                         id="first-name"
@@ -259,18 +234,13 @@
                         required
                         minlength="2"
                     >
-
                 </div>
 
-
-                <!-- ФАМИЛИЯ -->
-
+    <!-- ФАМИЛИЯ -->
                 <div class="form-field">
-
                     <label for="last-name">
                         Фамилия
                     </label>
-
                     <input
                         type="text"
                         id="last-name"
@@ -279,36 +249,26 @@
                         required
                         minlength="2"
                     >
-
                 </div>
 
-
-                <!-- ДАТА РОЖДЕНИЯ -->
-
+    <!-- ДАТА РОЖДЕНИЯ -->
                 <div class="form-field">
-
                     <label for="birth-date">
                         Дата рождения
                     </label>
-
                     <input
                         type="date"
                         id="birth-date"
                         name="birthDate"
                         required
                     >
-
                 </div>
 
-
-                <!-- ЛОГИН -->
-
+    <!-- ЛОГИН -->
                 <div class="form-field">
-
                     <label for="login">
                         Логин
                     </label>
-
                     <input
                         type="text"
                         id="login"
@@ -317,18 +277,13 @@
                         required
                         minlength="4"
                     >
-
                 </div>
 
-
-                <!-- ПАРОЛЬ -->
-
+    <!-- ПАРОЛЬ -->
                 <div class="form-field">
-
                     <label for="password">
                         Пароль
                     </label>
-
                     <input
                         type="password"
                         id="password"
@@ -337,18 +292,13 @@
                         required
                         minlength="6"
                     >
-
                 </div>
 
-
-                <!-- ПОВТОР ПАРОЛЯ -->
-
+    <!-- ПОВТОР ПАРОЛЯ -->
                 <div class="form-field">
-
                     <label for="repeat-password">
                         Повторите пароль
                     </label>
-
                     <input
                         type="password"
                         id="repeat-password"
@@ -357,153 +307,109 @@
                         required
                         minlength="6"
                     >
-
                 </div>
 
-
-                <!-- КНОПКА РЕГИСТРАЦИИ -->
-
+    <!-- КНОПКА РЕГИСТРАЦИИ -->
                 <button
                     type="submit"
                     class="registration-submit"
                 >
                     Зарегистрироваться
                 </button>
-
-
             </form>
-
         </div>
-
     </div>
 
-
-
     <!-- FOOTER -->
-
     <footer class="footer">
-
         <div class="footer-container">
 
-
-            <!-- ЛЕВАЯ ЧАСТЬ -->
-
+    <!-- ЛЕВАЯ ЧАСТЬ -->
             <div class="footer-info">
-
-                <h2>Product Cards</h2>
-
-                <p>
+                <h2 class="footer-title">Product Cards</h2>
+                <p class="footer-description">
                     У Нас Самые Лучшие Продукты Для Кожи!
                 </p>
-
                 <div class="social-links">
-
                     <a
-                        href="https://telegram./"
+                        class="social-link"
+                        href="https://telegram.org/"
                         target="_blank"
                     >
-                        <img src="images/telegram.svg"/>
+                        <img src="images/telegram.svg" alt="Telegram">
                     </a>
-
                     <a
+                        class="social-link"
                         href="https://vk.com/"
                         target="_blank"
                     >
-                        <img src="images/Vkontacte.svg"/>
+                        <img src="images/Vkontacte.svg" alt="ВКонтакте">
                     </a>
-
                 </div>
-
             </div>
 
-
-
-            <!-- ЦЕНТРАЛЬНАЯ ЧАСТЬ -->
-
+    <!-- ЦЕНТРАЛЬНАЯ ЧАСТЬ -->
             <div class="footer-subscribe">
-
-                <p>
+                <p class="subscribe-title">
                     Подпишись на наши акции:
                 </p>
-
-                <form id="subscribe-form">
-
+                <form
+                    id="subscribe-form"
+                    class="subscribe-form"
+                >
                     <input
                         type="email"
                         id="subscribe-email"
+                        class="subscribe-input"
                         name="email"
                         placeholder="Введи Email..."
                         required
                     >
-
-                    <button type="submit">
+                    <button
+                        type="submit"
+                        class="subscribe-button"
+                    >
                         Подписаться
                     </button>
-
                 </form>
-
             </div>
 
-
-
-            <!-- ПРАВАЯ ЧАСТЬ -->
-
+    <!-- ПРАВАЯ ЧАСТЬ -->
             <nav class="footer-nav">
-
-                <h2>Быстрые ссылки</h2>
-
-                <ul>
-
-                    <li>
-                        <a href="#">
+                <h2 class="footer-nav-title">Быстрые ссылки</h2>
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <a class="footer-nav-link" href="#">
                             Главная
                         </a>
                     </li>
-
-                    <li>
-                        <a href="#">
-                            Магазин
+                    <li class="footer-nav-item">
+                        <a class="footer-nav-link" href="#">
+                                Магазин
                         </a>
                     </li>
-
-                    <li>
-                        <a href="#">
-                            Контакты
+                    <li class="footer-nav-item">
+                        <a class="footer-nav-link" href="#">
+                                Контакты
                         </a>
                     </li>
-
                 </ul>
-
             </nav>
-
         </div>
 
-
-
-        <!-- НИЖНЯЯ ЧАСТЬ -->
-
+    <!-- НИЖНЯЯ ЧАСТЬ -->
         <div class="footer-bottom">
-
             <div class="footer-line"></div>
-
-            <p>
+            <p class="footer-bottom-text">
                 www.product-cards.com©all right reserve
             </p>
-
         </div>
-
     </footer>
 
-
-
     <!-- JAVASCRIPT -->
-
     <script
         type="module"
         src="js/homework-11.js"
     ></script>
-
-
 </body>
-
 </html>
