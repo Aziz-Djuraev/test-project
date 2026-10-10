@@ -98,15 +98,6 @@ button.active {
 }
 
 
-
-
-
-
-
-
-
-
-
 * {
     box-sizing: border-box;
 }
@@ -119,7 +110,6 @@ body {
 
 /* MAIN */
 main {
-    min-height: 100px;
     padding: 50px;
 }
 
@@ -148,8 +138,7 @@ main {
 
 /* ТРИ КОЛОНКИ */
 .footer-container {
-    width: 1,569px;
-    height: 147px;
+    max-width: 1569px;
     margin: 0 auto;
     padding: 0 60px;
     display: grid;
@@ -160,27 +149,20 @@ main {
 /* ЛЕВАЯ ЧАСТЬ */
 .footer-info {
     margin: 0 0 12px;
-    top: 85px;
-    left: 84px;
     color: #FFFFFF;
 }
 
 .footer-title {
-    width: 214px;
-    height: 43px;
+    max-width: 214px;
     font-weight: 800;
-    size: 28px;
+    font-size: -28px;
     line-height: 158%;
     color: #FFFFFF;
 }
 
 .footer-description {
-    margin-top: -16px;
-    width: 409px;
-    height: 28px;
-    font-weight: 400;
-    size: 18px;
-    line-height: 154%;
+    max-width: 409px;
+    font-size: -18px;
     color: #FFFFFF;
 }
 
@@ -209,10 +191,8 @@ main {
 
 .subscribe-title {
     margin: 0 0 10px;
-    width: 350px;
+    max-width: 350px;
     height: 29px;
-    top: 85px;
-    left: 713px;
     font-weight: 400;
     color: #d0d0d0;
     font-size: 16px;
@@ -224,7 +204,7 @@ main {
 .subscribe-form {
     display: flex;
     align-items: center;
-    width: 330px;
+    max-width: 330px;
     height: 42px;
     margin: 0 auto;
     background: white;
@@ -260,7 +240,7 @@ main {
     content: "";
     position: absolute;
     left: 0;
-    top: 50%;
+    margin-top: 7%;
     width: 1px;
     height: 18px;
     transform: translateY(-50%);
@@ -278,33 +258,33 @@ main {
 }
 
 .footer-nav-title {
-margin: 16px 0 12px;
-width: 178px;
-height: 24px;
-font-weight: 500;
-font-size: 14px;
-line-height: 100%;
-padding-bottom: 23px;
-}
+    margin: 16px 0 12px;
+    width: 178px;
+    height: 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    padding-bottom: 23px;
+    }
 
 .footer-nav-list {
-padding: 0;
-margin: 0;
-list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .footer-nav-item {
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-nav-link {
-color: #d0d0d0;
-text-decoration: none;
-font-size: 13px;
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 13px;
 }
 
 .footer-nav-link:hover {
-color: white;
+    color: white;
 }
 
 /* НИЖНЯЯ ЧАСТЬ */
@@ -324,9 +304,9 @@ color: white;
 }
 
 .footer-bottom-text {
-margin: 0 0 23px;
-color: #bdbdbd;
-font-size: 12px;
+    margin: 0 0 23px;
+    color: #bdbdbd;
+    font-size: 12px;
 }
 
 /* OVERLAY */
