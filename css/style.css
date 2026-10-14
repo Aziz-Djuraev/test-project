@@ -81,9 +81,20 @@ button {
     margin: 5px;
 }
 
-button.active {
+/* Первая карточка */
+.card-blue {
     background-color: #0000FF;
-    color: #ffffff;
+}
+
+/* Все карточки */
+.card-green {
+    background-color: #00FF00;
+}
+
+/* Кнопка, цвет которой меняется */
+#change-color-button.active {
+    background-color: #0000FF;
+    color: #FFFFFF;
     border-color: #0000FF;
 }
 
@@ -98,6 +109,8 @@ button.active {
     font-size: 20px;
     line-height: 27px;
 }
+
+
 
 /* MAIN */
 .button {

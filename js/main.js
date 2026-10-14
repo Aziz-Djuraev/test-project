@@ -11,11 +11,19 @@ const greenColorHash = '#00FF00';
 const blueColorHash = '#0000FF';
 
 changeColorFirstCardButton.addEventListener('click', () => {
-  firstProductCard.style.backgroundColor = blueColorHash;
+    const firstProductCard = document.querySelector('.card');
+
+    if (firstProductCard) {
+        firstProductCard.classList.toggle('card-blue');
+    }
 });
 
 changeColorAllCardButton.addEventListener('click', () => {
-  productCards.forEach((card) => card.style.backgroundColor = greenColorHash);
+    const productCards = document.querySelectorAll('.card');
+
+    productCards.forEach((card) => {
+        card.classList.toggle('card-green');
+    });
 });
 
 openPadgeGoogleButton.addEventListener('click', openGoogle);
