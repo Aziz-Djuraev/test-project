@@ -1,6 +1,5 @@
 import { products } from './productsData.js';
 
-
 // Пункт 4. Получаем массив объектов с названием и описанием
 const productDescriptions = products.reduce((acc, currentProduct) => {
   acc.push({
@@ -11,7 +10,6 @@ const productDescriptions = products.reduce((acc, currentProduct) => {
 }, []);
 
 console.log(productDescriptions);
-
 
 // Пункт 5. Получаем количество карточек
 function getCountFromUser() {
