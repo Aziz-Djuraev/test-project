@@ -9,7 +9,11 @@ export default class Modal {
         this.overlay = document.querySelector('.overlay');
         this.closeButton = this.modal.querySelector('.modal-close');
 
+        this.addCloseListeners();
+    }
+
         // Закрытие по крестику
+    addCloseListeners() {
         if (this.closeButton) {
             this.closeButton.addEventListener('click', () => {
                 this.close();
