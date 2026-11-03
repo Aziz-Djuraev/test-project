@@ -1,92 +1,69 @@
-const subscribeForm = document.querySelector('#subscribe-form');
-const registrationButton = document.querySelector('#registration-button');
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const modalClose = document.querySelector('#modal-close');
-const registrationForm = document.querySelector('#registration-form');
-const password = document.querySelector('#password');
-const repeatPassword = document.querySelector('#repeat-password');
+import Modal from './Modal.js';
+import Form from './Form.js';
 
-// Переменная user
+// Создаём модальное окно
+const registrationModal = new Modal('registration-modal');
+
+// Создаём объекты форм
+const registrationForm = new Form('registration-form');
+const subscribeForm = new Form('subscribe-form');
+
+// Кнопка открытия модального окна
+const registrationButton = document.querySelector('#registration-button');
+
+// Переменная для пользователя
 let user = null;
 
-/* ФОРМА ПОДПИСКИ */
-subscribeForm.addEventListener('submit', function (event) {
+// Открытие окна регистрации
+registrationButton.addEventListener('click', () => {
+    registrationModal.open();
 
+    console.log('Окно открыто:', registrationModal.isOpen());
+});
+
+// Отправка формы подписки
+subscribeForm.form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    if (!subscribeForm.checkValidity()) {
-        subscribeForm.reportValidity();
+    if (!subscribeForm.isValid()) {
+        subscribeForm.form.reportValidity();
         return;
     }
 
-    const formData = new FormData(subscribeForm);
-    const email = formData.get('email');
+    const values = subscribeForm.getValues();
 
     console.log({
-        email: email
+        email: values.email
     });
 
     subscribeForm.reset();
 });
 
-/* ОТКРЫТИЕ МОДАЛЬНОГО ОКНА */
-registrationButton.addEventListener('click', function () {
-
-    modal.classList.add('modal-showed');
-    overlay.classList.add('modal-showed');
-});
-
-/* ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА */
-function closeModal() {
-
-    modal.classList.remove('modal-showed');
-    overlay.classList.remove('modal-showed');
-}
-
-modalClose.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-/* ФОРМА РЕГИСТРАЦИИ */
-registrationForm.addEventListener('submit', function (event) {
-
+// Отправка формы регистрации
+registrationForm.form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    // Проверяем правильность заполнения формы
-    if (!registrationForm.checkValidity()) {
-        alert('Регистрация отклонена. Заполните форму правильно.');
-        registrationForm.reportValidity();
+    if (!registrationForm.isValid()) {
+        registrationForm.form.reportValidity();
         return;
     }
 
-    // Проверяем пароли
-    if (password.value !== repeatPassword.value) {
+    const values = registrationForm.getValues();
+
+    if (values.password !== values.repeatPassword) {
         alert('Регистрация отклонена. Пароли не совпадают.');
         return;
     }
 
-    // Получаем данные формы
-    const formData = new FormData(registrationForm);
-
-    // Создаем пользователя
     user = {
-        firstName: formData.get('firstName'),
-        lastName: formData.get('lastName'),
-        birthDate: formData.get('birthDate'),
-        login: formData.get('login'),
-        password: formData.get('password'),
-        repeatPassword: formData.get('repeatPassword'),
+        ...values,
         createdOn: new Date()
     };
 
-    // Выводим пользователя в консоль
     console.log(user);
 
     alert('Регистрация прошла успешно!');
 
-    // Закрываем модалку
-    closeModal();
-
-    // Очищаем форму
+    registrationModal.close();
     registrationForm.reset();
 });
