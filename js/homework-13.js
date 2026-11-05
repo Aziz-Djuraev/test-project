@@ -15,10 +15,10 @@ class Drink {
     // Получить информацию о напитке
     getInfo() {
         return `
-Название: ${this.name}
-Размер: ${this.size}
-Цена: ${this.price} €
-Температура: ${this.#temperature} °C`;
+            Название: ${this.name}
+            Размер: ${this.size}
+            Цена: ${this.price} €
+            Температура: ${this.#temperature} °C`;
     }
 
     // Получить температуру
@@ -72,8 +72,7 @@ class Coffee extends Drink {
 
     getInfo() {
         return `${super.getInfo()}
-Зёрна: ${this.beans}
-Молоко: ${this.milk}`;
+            Зёрна: ${this.beans} Молоко: ${this.milk}`;
     }
 }
 
@@ -93,7 +92,7 @@ class Tea extends Drink {
 
     getInfo() {
         return `${super.getInfo()}
-Вид чая: ${this.teaType}`;
+            Вид чая: ${this.teaType}`;
     }
 }
 
@@ -114,7 +113,7 @@ class Lemonade extends Drink {
 
     getInfo() {
         return `${super.getInfo()}
-Вкус: ${this.flavor}`;
+            Вкус: ${this.flavor}`;
     }
 }
 
@@ -134,7 +133,7 @@ class Juice extends Drink {
 
     getInfo() {
         return `${super.getInfo()}
-Фрукты: ${this.fruit}`;
+            Фрукты: ${this.fruit}`;
     }
 }
 
@@ -148,8 +147,8 @@ class Cafe {
     // Получить информацию о кафе
     getInfo() {
         return `
-Кафе: ${this.name}
-Местоположение: ${this.location}`;
+            Кафе: ${this.name}
+            Местоположение: ${this.location}`;
     }
 
     // Заказать напиток
@@ -171,36 +170,19 @@ const cafe = new Cafe('Coffee House', 'Вильнюс');
 
 // Создаём напитки
 const coffee = new Coffee(
-    'Капучино',
-    'Средний',
-    4.5,
-    20,
-    'Арабика',
-    'Овсяное'
+    'Капучино', 'Средний', 4.5, 20, 'Арабика', 'Овсяное'
 );
 
 const tea = new Tea(
-    'Зелёный чай',
-    'Большой',
-    3,
-    20,
-    'Зелёный'
+    'Зелёный чай', 'Большой', 3, 20, 'Зелёный'
 );
 
 const lemonade = new Lemonade(
-    'Лимонад',
-    'Средний',
-    3.5,
-    20,
-    'Лимон'
+    'Лимонад', 'Средний', 3.5, 20, 'Лимон'
 );
 
 const juice = new Juice(
-    'Апельсиновый сок',
-    'Большой',
-    4,
-    20,
-    'Апельсин'
+    'Апельсиновый сок', 'Большой', 4, 20, 'Апельсин'
 );
 
 // 1. Информация о кафе
