@@ -14,11 +14,7 @@ class Drink {
 
     // Получить информацию о напитке
     getInfo() {
-        return `
-            Название: ${this.name}
-            Размер: ${this.size}
-            Цена: ${this.price} €
-            Температура: ${this.#temperature} °C`;
+        return `Название: ${this.name} Размер: ${this.size} Цена: ${this.price} € Температура: ${this.#temperature} °C`;
     }
 
     // Получить температуру
@@ -71,8 +67,7 @@ class Coffee extends Drink {
     }
 
     getInfo() {
-        return `${super.getInfo()}
-            Зёрна: ${this.beans} Молоко: ${this.milk}`;
+        return `${super.getInfo()} Зёрна: ${this.beans} Молоко: ${this.milk}`;
     }
 }
 
