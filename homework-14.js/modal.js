@@ -20,10 +20,7 @@ export class Modal {
 
         // Подписываемся на клик по оверлею
         if (this.shouldCloseOnOverlay) {
-            this.overlay.addEventListener(
-                'click',
-                this.overlayClickHandler
-            );
+            this.overlay.addEventListener('click', this.overlayClickHandler);
         }
     }
 
