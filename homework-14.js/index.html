@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="content">
+
+      <h1 class="title">Выбери свой продукт</h1>
+
+      <button id="change-color-first-card">Сменить цвет первой карточки</button>
+      <button id="change-color-all-card">Сменить цвет всех карточек</button>
+      <button id="open-padge-google">Открыть страницу Google.com</button>
+      <button id="output-message-console-log">Вывести сообщение в консоль лог</button>
+      <button id="change-color-button">Сменить цвет кнопки</button>
+
+      <ul class="products-list"></ul>
+
+      <template id="product-template">
+        <li class="card">
+          <img src="" alt="">
+          <p class="label-text"><span class="skin-type"></span></p>
+          <h2 class="product"></h2>
+          <p class="description"></p>
+          <span>Состав:</span>
+          <ul class="components-list"></ul>
+          <div class="price-row">
+            <b class="price">Цена</b>
+            <span class="product-price"></span>
+          </div>
+        </li>
+      </template>
+    </div>
+    <!-- КНОПКИ ОТКРЫТИЯ МОДАЛЬНЫХ ОКОН -->
+    <div class="button">
+        <button
+            type="button"
+            class="registration-button"
+            id="registration-button"
+        >
+            Регистрация
+        </button>
+        <button
+            type="button"
+            class="auth-button"
+            id="auth-button"
+        >
+            Авторизация
+        </button>
+    </div>
+
+    <!-- ОДИН ОБЩИЙ OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- МОДАЛЬНОЕ ОКНО РЕГИСТРАЦИИ -->
+    <div class="modal" id="registration-modal">
+        <div class="modal-content">
+
+    <!-- КНОПКА ЗАКРЫТИЯ -->
+            <button
+                type="button"
+                class="modal-close-button"
+            >
+                ×
+            </button>
+            <h2>Регистрация</h2>
+
+    <!-- ФОРМА РЕГИСТРАЦИИ -->
+            <form id="registration-form">
+
+    <!-- ИМЯ -->
+                <div class="form-field">
+                    <label for="first-name">
+                        Имя
+                    </label>
+                    <input
+                        type="text"
+                        id="first-name"
+                        name="firstName"
+                        placeholder="Введите имя"
+                        required
+                        minlength="2"
+                    >
+                </div>
+
+    <!-- ФАМИЛИЯ -->
+                <div class="form-field">
+                    <label for="last-name">
+                        Фамилия
+                    </label>
+                    <input
+                        type="text"
+                        id="last-name"
+                        name="lastName"
+                        placeholder="Введите фамилию"
+                        required
+                        minlength="2"
+                    >
+                </div>
+
+    <!-- ДАТА РОЖДЕНИЯ -->
+                <div class="form-field">
+                    <label for="birth-date">
+                        Дата рождения
+                    </label>
+                    <input
+                        type="date"
+                        id="birth-date"
+                        name="birthDate"
+                        required
+                    >
+                </div>
+
+    <!-- ЛОГИН -->
+                <div class="form-field">
+                    <label for="login">
+                        Логин
+                    </label>
+                    <input
+                        type="text"
+                        id="login"
+                        name="login"
+                        placeholder="Введите логин"
+                        required
+                        minlength="4"
+                    >
+                </div>
+
+    <!-- ПАРОЛЬ -->
+                <div class="form-field">
+                    <label for="password">
+                        Пароль
+                    </label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Введите пароль"
+                        required
+                        minlength="6"
+                    >
+                </div>
+
+    <!-- ПОВТОР ПАРОЛЯ -->
+                <div class="form-field">
+                    <label for="repeat-password">
+                        Повторите пароль
+                    </label>
+                    <input
+                        type="password"
+                        id="repeat-password"
+                        name="repeatPassword"
+                        placeholder="Повторите пароль"
+                        required
+                        minlength="6"
+                    >
+                </div>
+
+    <!-- КНОПКА РЕГИСТРАЦИИ -->
+                <button
+                    type="submit"
+                    class="registration-submit"
+                >
+                    Зарегистрироваться
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+
+            <button
+                type="button"
+                class="modal-close-button"
+            >
+                ×
+            </button>
+
+            <h2>Авторизация</h2>
+
+            <form id="auth-form">
+
+                <div class="form-field">
+                    <label for="auth-login">Логин</label>
+                    <input
+                        type="text"
+                        id="auth-login"
+                        name="login"
+                        placeholder="Введите логин"
+                        required
+                        minlength="4"
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="auth-password">Пароль</label>
+                    <input
+                        type="password"
+                        id="auth-password"
+                        name="password"
+                        placeholder="Введите пароль"
+                        required
+                        minlength="6"
+                    >
+                </div>
+
+                <button type="submit" class="registration-submit">
+                    Войти
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+
+    <!-- ЛЕВАЯ ЧАСТЬ -->
+            <div class="footer-info">
+                <h2 class="footer-title">Product Cards</h2>
+                <p class="footer-description">
+                    У Нас Самые Лучшие Продукты Для Кожи!
+                </p>
+                <div class="social-links">
+                    <a
+                        class="social-link"
+                        href="https://telegram.org/"
+                        target="_blank"
+                    >
+                        <img src="images/telegram.svg" alt="Telegram">
+                    </a>
+                    <a
+                        class="social-link"
+                        href="https://vk.com/"
+                        target="_blank"
+                    >
+                        <img src="images/Vkontacte.svg" alt="ВКонтакте">
+                    </a>
+                </div>
+            </div>
+
+    <!-- ЦЕНТРАЛЬНАЯ ЧАСТЬ -->
+            <div class="footer-subscribe">
+                <p class="subscribe-title">
+                    Подпишись на наши акции:
+                </p>
+                <form
+                    id="subscribe-form"
+                    class="subscribe-form"
+                >
+                    <input
+                        type="email"
+                        id="subscribe-email"
+                        class="subscribe-input"
+                        name="email"
+                        placeholder="Введи Email..."
+                        required
+                    >
+                    <button
+                        type="submit"
+                        class="subscribe-button"
+                    >
+                        Подписаться
+                    </button>
+                </form>
+            </div>
+
+    <!-- ПРАВАЯ ЧАСТЬ -->
+            <nav class="footer-nav">
+                <h2 class="footer-nav-title">Быстрые ссылки</h2>
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <a class="footer-nav-link" href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a class="footer-nav-link" href="#">
+                                Магазин
+                        </a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a class="footer-nav-link" href="#">
+                                Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    <!-- НИЖНЯЯ ЧАСТЬ -->
+        <div class="footer-bottom">
+            <div class="footer-line"></div>
+            <p class="footer-bottom-text">
+                www.product-cards.com©all right reserve
+            </p>
+        </div>
+    </footer>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
