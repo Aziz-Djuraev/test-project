@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async — Пользователи</title>
+    <link rel="stylesheet" href="async/async.css">
+</head>
+<body class="async-page">
+
+    <main class="async-container">
+
+        <h1 class="async-title">Список пользователей</h1>
+
+        <div class="async-buttons">
+            <button
+                class="async-button async-button-danger"
+                id="delete-all-users"
+                type="button"
+            >
+                Удалить все карточки
+            </button>
+
+            <button
+                class="async-button"
+                id="get-all-users"
+                type="button"
+            >
+                Получить всех пользователей
+            </button>
+        </div>
+
+        <p class="status-message" id="status-message">
+            Данные загружаются
+        </p>
+
+        <section
+            class="users-list"
+            id="users-list"
+            aria-label="Карточки пользователей"
+        ></section>
+
+    </main>
+
+    <script src="js/async.js"></script>
+</body>
+</html>

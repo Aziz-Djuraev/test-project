@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+.async-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 1px 20px 40px;
+    font-family: Arial, sans-serif;
+    color: #292929;
+    background: #f3f5f8;
+}
+
+.async-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 55px auto 0;
+    text-align: center;
+}
+
+.async-title {
+    margin: 0 0 28px;
+    font-size: 32px;
+}
+
+.async-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.async-button {
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #303846;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.async-button:hover {
+    background: #4b586b;
+}
+
+.async-button-danger {
+    background: #b83232;
+}
+
+.async-button-danger:hover {
+    background: #922626;
+}
+
+.status-message {
+    min-height: 25px;
+    margin: 25px 0;
+    font-size: 18px;
+}
+
+.users-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.user-card {
+    width: 245px;
+    padding: 22px;
+    border: 1px solid #e0e3e8;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 14px rgba(30, 40, 55, 0.08);
+    text-align: left;
+}
+
+.user-card-title {
+    margin: 0 0 16px;
+    font-size: 20px;
+}
+
+.user-card-info {
+    margin: 0 0 11px;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.delete-user-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 7px;
+    background: #d94343;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-user-button:hover {
+    background: #ad2e2e;
+}
+
+.async-button:focus-visible,
+.delete-user-button:focus-visible {
+    outline: 3px solid #6d9de8;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .async-container {
+        margin-top: 30px;
+    }
+
+    .async-title {
+        font-size: 26px;
+    }
+
+    .async-buttons {
+        flex-direction: column;
+    }
+
+    .async-button,
+    .user-card {
+        width: 100%;
+    }
+}
